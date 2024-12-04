@@ -1,0 +1,404 @@
+/* styles.css */
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#home {
+   
+}
+
+body {
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 100vh; /* Corrected from 100vm to 100vh */
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.top-bar {
+    background-color: #d9d9d9; /* Light background color */
+    padding: 10px; /* Padding for the top bar */
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Center items vertically */
+    border-bottom: 1px solid #ddd; /* Optional: bottom border */
+}
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%; /* Start off-screen to the right */
+    animation: marquee 10s linear infinite; /* Adjust duration as needed */
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0); /* Start position */
+    }
+    100% {
+        transform: translate(-100%, 0); /* End position */
+    }
+}
+
+.contact-info {
+    display: flex; /* Use flexbox for contact info */
+    gap: 15px; /* Space between icons and text */
+}
+
+.contact-info a {
+    text-decoration: none; /* Remove underline from links */
+    color: #333; /* Text color */
+    display: flex; /* Use flexbox to align icon and text */
+    align-items: center; /* Center align items */
+}
+
+.contact-info img {
+    width: 20px; /* Set icon size */
+    height: 20px; /* Set icon size */
+    margin-right: 5px; /* Space between icon and text */
+}
+
+/* Header styles */
+header {
+    background: rgba(31, 30, 30, 0.904);
+    color: #fff;
+    padding: 0 20px;
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 250px;
+    margin-right: 0px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.left-text,
+.right-text {
+    font-size: 50px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navigation-container {
+    display: flex;
+    gap: 10px;
+}
+
+.navigation-box {
+    background-color: #d9d9d9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.navigation-box a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    text-align: center;
+}
+
+.navigation-box a:hover {
+    background-color: #e2e2e2;
+}
+
+#services {
+    text-align: center;
+    padding: 20px;
+}
+
+.Practice {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.navigation-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.navigation-box2 {
+    margin: 10px;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.navigation-box2 a {
+    font-size: 11px;
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.service-details {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    z-index: 10 }
+
+.navigation-box2:hover .service-details {
+    display: block; /* Show details on hover */
+}
+
+.navigation-box2 a:hover {
+    background-color: rgba(31, 30, 30, 0.811); /* Change background on hover */
+    color: white;
+}
+
+.Document,
+.Criminal,
+.Cheque,
+.Civil,
+.Commercial,
+.Family,
+.Mediation,
+.Domestic,
+.Cyber {
+    text-align: left;
+}
+
+#photo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.photo-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.photo-item {
+    display: flex;
+    align-items: flex-start;
+    margin: 10px;
+    flex: 1 1 300px; /* Allow the item to grow and shrink with a base width */
+}
+
+.photo-item span {
+    display: flex;
+    flex-direction: column; /* Stack the image and name vertically */
+    align-items: center; /* Center align the image and name */
+    margin-right: 20px; /* Space between the image/name and details */
+}
+
+.photo-details {
+    text-align: left; /* Align text to the left */
+}
+
+.photo-item img {
+    border-radius: 5px; /* Optional: rounded corners for images */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Section styles */
+section {
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1,
+h2 {
+    color: black;
+}
+
+h2 {
+    margin-top: 20px;
+}
+
+/* FAQ styles */
+.faq {
+    margin-bottom: 15px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input,
+form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background: black;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.fixed-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed-buttons a {
+    margin: 10px 0; /* Space between buttons */
+}
+
+.fixed-buttons img {
+    width: 50px; /* Set the width of the icons */
+    height: 50px; /* Set the height of the icons */
+}
+
+form button:hover {
+    background: gray;
+}
+
+/* Google Map styles */
+#map {
+    margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column; /* Stack header content vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .left-text,
+    .right-text {
+        font-size: 30px; /* Reduce font size for mobile */
+    }
+
+    .navigation-container {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    .navigation-box {
+        width: 100%; /* Full width for navigation boxes */
+        margin-bottom: 10px; /* Space between boxes */
+    }
+
+    .photo-item {
+        flex: 1 1 100%; /* Full width for photo items */
+    }
+
+    form {
+        width: 100%; /* Full width for forms */
+    }
+
+    form input,
+    form textarea {
+        width: 100%; /* Full width for inputs and textareas */
+    }
+
+    .fixed-buttons {
+        right: 10px; /* Adjust position for smaller screens */
+        bottom: 10px; /* Adjust position for smaller screens */
+    }
+}
+
+.fixed-buttons a {
+    margin: 10px 0;
+    /* Space between buttons */
+}
+
+.fixed-buttons img {
+    width: 50px;
+    /* Set the width of the icons */
+    height: 50px;
+    /* Set the height of the icons */
+}
+
+form button:hover {
+    background: gray;
+}
+
+/* Google Map styles */
+#map {
+    margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
