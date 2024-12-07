@@ -1,8 +1,5 @@
-function toggleDetails(detailsId) {
-            var details = document.getElementById(detailsId);
-            if (details.style.display === "none") {
-                details.style.display = "block";
-            } else {
-                details.style.display = "none";
-            }
-        }
+// Add this to your script.js
+document.getElementById('toggle-button').addEventListener('click', function() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('show'); // Toggle the 'show' class
+});
